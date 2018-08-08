@@ -1,0 +1,531 @@
+/* ========================================================================== */
+/* HERO SECTION */
+/* ========================================================================== */
+
+.hero {
+    position: relative;
+    z-index: 1;
+    padding: 15rem 0;
+    background: transparent;
+    color: $white;
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(center);
+    background: $bg-white;
+    background: rgb(20,30,48);
+    background: -moz-linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+    background: linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#141e30",endColorstr="#243b55",GradientType=1);
+    text-align: center;
+}
+.hero__title{
+    font-weight: 300;
+    font-family: $font-family-secondary;
+    color: $text-white;
+    font-size: 5.2rem;
+    margin: 0;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+.hero__text{
+    font-weight: 400;
+    color: $text-white;
+    font-size: 1.8rem;
+    margin: 1rem auto 4rem auto;
+    max-width: 79rem;
+}
+.hero__btn{
+    margin: 10px;
+}
+
+@media screen and (max-width:991px){
+    .hero {
+        padding: 0;
+    }
+    .hero__container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .swiper-pagination--hero{
+        display: block;
+    }
+    .swiper-pagination--hero .swiper-pagination-bullet-active{
+        background: $brand-primary;
+    }
+    .swiper-button-next--hero, .swiper-button-prev--hero{
+        display: none;
+    }
+}
+@media screen and (max-width:768px){
+    .hero__swiper{
+        height: 320px;
+    }
+    .hero__swiper-tabs{
+        display: none;
+    }
+}
+@media screen and (max-width:600px){
+    .hero__swiper{
+        height: 300px;
+    }
+    .hero__content{
+        padding: 20px;
+        max-width: 100%;
+    }
+    .hero__title{
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+    .hero__text{
+        display: none;
+    }
+    .hero__sale-tag{
+        top: 30px;
+        left: 30px;
+    }
+}
+@media screen and (max-width:420px){
+    .hero__swiper-slide{
+        @include flexbox();
+        @include flex-direction(column);
+    }
+    .hero__swiper{
+        height: 260px;
+    }
+    .hero__contant{
+        padding-right: 0px;   
+    }
+    .hero__title{
+        font-size: 2.4rem;
+        margin-bottom: 10px;
+    }
+    .hero__price{
+        font-size: 2.4rem;
+    }
+    .hero__sale-tag{
+        top: 30px;
+        left: 30px;
+    }
+    .hero__btn .btn__icon{
+        display: none;
+    }
+}
+
+/* ========================================================================== */
+/* BENEFITS */
+/* ========================================================================== */
+
+.benefits{
+    padding: 2rem 0;
+}
+.benefits__wrap{
+    background: $bg-light;
+    border-radius: $border-radius-primary;
+    @include flexbox();
+    @include flex-wrap(wrap);
+    padding: 3rem 0;
+}
+.benefits__single{
+    border-right: 1px solid $border-primary;
+    padding: 0 3rem;
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(center);
+    @include align-items(center);
+    @include flex-grow(1);
+    @include flex-basis(0);
+
+    &:last-child{
+        border-right: none;  
+    }
+}
+.benefits__img-wrap{
+    background: transparent;
+    padding: 0px;
+    height: 44px;
+    width: 44px;
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(center);
+    @include align-items(center);
+    @include flex-shrink(0);
+}
+.benefits__img{
+    color: $text-white;
+    height: 100%;
+}
+.benefits__text{
+    margin: 0;
+    padding-left: 20px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+}
+@media screen and (max-width:991px){
+    .benefits__container{
+        @include flex-wrap(wrap);
+    }
+    .benefits__single{
+        width: 50%;
+        @include flex-grow(1);
+        @include flex-basis(auto);
+        margin: 10px 0;
+        @include justify-content(center);
+
+        &:nth-child(2n+2){
+            border-right: none;  
+        }
+    }
+}
+@media screen and (max-width:500px){
+    .benefits{
+        padding: 10px 0;
+    }
+    .benefits__single{
+        @include flex-direction(column);
+        text-align: center;
+        padding: 10px;
+    }
+    .benefits__text{
+        padding: 0;
+        padding-top: 10px;
+    }
+}
+
+/* ========================================================================== */
+/* INDEX-CATEGORIES SECTION */
+/* ========================================================================== */
+
+.index-categories{
+    padding: 6rem 0;
+    background: $bg-white;
+}
+.index-categories__title{
+    color: $text-primary;
+    margin-bottom: 2rem;
+    font-size: 3rem;  
+    font-family: $font-family-secondary;
+    font-weight: 700;
+    text-align: center;
+}
+.index-categories__single-wrap{
+    margin-bottom: 20px;
+}
+.index-categories__single{
+    height: 100%; 
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+}
+.index-categories__img{
+    position: relative;
+    max-width: 180px;
+}
+.index-categories__single-title{
+    color: $brand-primary;
+    padding: 2rem 0 0.5rem 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 2.4rem;
+}
+.index-categories__wrap{
+    padding-top: 0rem;
+    @include flexbox();
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(center);
+    margin: 0 -2.5px;
+}
+.index-categories__link{
+    font-weight: 400;
+    color: $text-primary;
+    font-size: 13px; 
+    display: block;
+    line-height: 1.5;
+    position: relative;
+    margin: 2.5px;
+    padding: 2px 10px;
+    background: $bg-light;
+    @include transition(0.1s ease all);
+
+    &:hover, &:active, &:focus{
+        text-decoration: none;
+        background: $brand-primary;
+        color: $text-white;
+    }
+}
+
+@media screen and (max-width:768px){
+    .index-categories__img{
+        display: block;
+        position: relative;
+        width: 300px;
+        max-width: 100%;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+    }
+}
+
+
+/* ========================================================================== */
+/* INDEX PRODUCTS */
+/* ========================================================================== */
+
+.index-products{
+    padding: 8rem 0; 
+    position: relative;
+    background: $bg-light;
+}
+@media screen and (max-width:991px){
+    .index-products{
+        padding-bottom: 0; 
+    }
+}
+
+/* ========================================================================== */
+/* INDEX LOGOS */
+/* ========================================================================== */
+
+.logos{
+    padding: 0;
+}
+.logos__swiper{
+    position: relative;
+}
+.logos__swiper-wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.logos__swiper-slide{
+    height: auto;
+    position: relative;
+    text-align: center;
+    padding: 0px;
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+    @include justify-content(center);
+
+    .swiper-lazy-loaded{
+        max-height: 110px; 
+    }
+    
+    &:hover, &:active, &:focus{
+        &::after{
+            content: "";
+            position: absolute;
+            width: 100%;
+            top: 5px;
+            bottom: 5px;
+            @include box-shadow(0px,0,10px,$black-transparent-25);
+        }
+    }  
+}
+@media screen and (max-width:991px){
+    .logos{
+        display: none;
+    }
+}
+
+/* ========================================================================== */
+/* INDEX CTA */
+/* ========================================================================== */
+
+.index-cta{
+    background: $bg-white;
+    padding: 4rem 0 0 0;
+}
+.index-cta__wrap{
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+    background: #f6f6f6;
+    position: relative;
+
+    &::before{
+        content: "";
+        background: $bg-white;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 16px;
+    }
+}
+.index-cta__img{
+    max-height: 440px;
+    z-index: 2;
+}
+.index-cta__title{
+    font-weight: 700;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 500;
+    width: 100%;
+    padding: 0 2rem 1rem 2rem;
+}
+.index-cta__content{
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(flex-start);
+    @include flex-grow(1);
+    @include flex-wrap(wrap);
+    padding: 2rem 0;
+}
+.index-cta__col{
+    padding-bottom: 0px;
+    @include flex-grow(1);
+}
+.index-cta__single{
+    padding: 1.5rem 2rem;
+    height: 100%;
+}
+.index-cta__text{
+    font-size: 1.5rem;
+    color: $text-primary;
+    line-height: 3rem;
+    margin: 0;
+    display: block;
+}
+.index-cta__link{
+    display: block;
+    font-size: 1.5rem;
+}
+@media screen and (max-width: 700px){
+    .index-cta{
+        display: none;
+    }
+}
+
+/* ========================================================================== */
+/* PAGE-HEADING SECTION */
+/* ========================================================================== */
+
+.page-heading {
+    padding: 8rem 0;
+    background: $bg-light;
+    position: relative;
+
+	&::after{
+	    content: "";
+	    @include absolute-position(0,0,0,0);
+        background: rgb(20,30,48);
+        background: -moz-linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+        background: linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#141e30",endColorstr="#243b55",GradientType=1);
+        z-index: 1;
+        opacity: 0.95;
+	}
+}
+.page-heading__title{
+    color: $text-white;
+    font-family: $font-family-alt;
+    font-weight: 300;
+    position: relative;
+    margin: 0;
+    z-index: 2;
+    font-size: 4rem;
+    line-height: 1.5;
+    text-align: center
+}
+.page-heading__subtitle{
+    color: $text-white;
+    display: block;
+    z-index: 2;
+    position: relative;
+    text-align: center;
+}
+@media screen and (max-width:991px){
+    .page-heading {
+        padding: 3rem 0;
+        text-align: center;
+    }
+    .page-heading__title{
+        font-size: 3rem;
+    }
+}
+
+.page-heading--category{ 
+    padding: 4rem 0 0 0;
+    background: $bg-white;
+
+    &::after{
+        content: none;
+    }
+}
+.page-heading--category__title{ 
+    font-size: 3.6rem;
+    font-family: $font-family-alt;
+    font-weight: 600;
+    text-align: left;
+}
+.page-heading--category__subtitle-excerpt, .page-heading--category__subtitle{ 
+    color: $text-primary;
+    text-align: left;
+}
+.page-heading--category__toggle{
+    color: $brand-primary;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* ========================================================================== */
+/* NEWS BOTTOM SECTION */
+/* ========================================================================== */
+
+.news-bottom{
+    padding: 8rem 0;
+    background: $bg-light;
+}
+.news-bottom__title{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-family: $font-family-alt;
+    font-weight: 600;
+}
+.news-bottom__btn-wrap{
+    margin-top: 2rem;
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(center);
+}
+
+
+
+.index-about{
+    background: $bg-white;
+    padding: 8rem 0;
+}
+.index-about__title{
+    font-size: 3.6rem;
+    font-weight: 400;
+    color: $text-primary;
+    position: relative;
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+
+    &::after {
+        content: "";
+        height: 4px;
+        width: 80px;
+        background: $brand-primary;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+    }
+}
+.index-about__text{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $text-primary;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+}

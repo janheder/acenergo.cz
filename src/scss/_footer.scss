@@ -1,0 +1,347 @@
+footer{
+    background: rgb(20,30,48);
+    background: -moz-linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+    background: linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#141e30",endColorstr="#243b55",GradientType=1);
+    padding: 0rem 0 7rem 0;
+    & .col{
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+}
+@media screen and (max-width:991px){
+    footer{
+        padding: 0;
+    }
+}
+
+/***** FOOTER BAR *****/
+.footer-bar{
+    background: $bg-white;
+    border-bottom: 1px solid $border-primary;
+    padding: 5rem 0 5rem 0;
+    position: relative;
+}
+.footer-bar__container{
+    @include flexbox();
+    @include flex-direction(row);
+    z-index: 2;
+    position: relative;
+}
+.footer-bar__email{
+    @include flexbox();
+    @include flex-grow(1);
+    @include flex-basis(0);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    @include align-items(center);
+}
+.footer-bar__h3{
+    color: $text-primary;
+    font-size: 3rem;
+    margin: 0;
+}
+.footer-bar__p{
+    color: $text-primary; 
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0 4rem;
+}
+.footer-bar__btn-link{
+    margin-top: 2rem;
+}
+.footer-bar__email-form{
+    position: relative;
+    margin-top: 0;
+    width: 500px;
+    max-width: 100%;
+}
+.footer-bar__email-form form{
+    position: relative;
+}
+.footer-bar__input{
+    border: 0;
+    padding: 1rem 2rem;
+    min-height: 0;
+    height: 5rem;
+    border: 1px solid $border-primary;
+}
+.footer-bar__btn{
+    height: 5rem;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: auto;
+    min-height: 0;
+    line-height: 1.5;
+    padding: 0.5rem 2.5rem;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.footer-bar__label{
+    border: 0;
+    padding: 0;
+    padding-left: 2.25rem;
+    min-height: 0;
+}
+.footer-bar__label .form-check__box{
+    left: 0;
+    top: 3px;
+}
+.footer-bar__notice, .footer-bar__notice a{
+    margin: 0;
+    margin-top: 5px;
+    font-size: 1.4rem;
+}
+@media screen and (max-width:768px){
+    .footer-bar__email-form .form-check{
+        text-align: center;
+    }
+    .footer-bar__label{
+        display: inline-flex;
+    } 
+}
+
+/* ========================================================================== */
+/* FOOTER CONTACTS */
+/* ========================================================================== */
+
+.footer-contacts{
+    position: relative;
+    z-index: 2;
+    background: $brand-primary;
+    background-size: 20%;
+    z-index: 1;
+    padding: 10rem 0;
+
+    &::after{
+        content: "";
+        background: $brand-primary;
+        opacity: 0.9;
+        @include absolute-position(0,0,0,0);
+        z-index: -1;
+    }
+}
+.footer-contacts__title{
+    color: $text-white;
+    font-size: 3.6rem;
+    line-height: 6rem;
+    max-width: 78rem;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 300;
+
+    a{
+        color: $text-white;
+        text-decoration: underline;
+        font-size: 3.6rem;
+        line-height: 6rem;
+        font-weight: 400;
+
+        &:hover, &:active, &:focus{
+            color: $text-white;
+            text-decoration: underline;
+            opacity: 1;
+        }
+    }
+}
+
+
+/* ========================================================================== */
+/* FOOTER MAIN */
+/* ========================================================================== */
+
+.footer-main{
+    padding-top: 5rem;
+    margin-top: 0px;
+}
+.footer-main__h5{
+    font-size: 2rem;
+    font-weight: 500;
+    color: $text-white;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+.footer-main__link{
+    color: $text-white;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+    line-height: 3.6rem;
+    opacity: 0.8;
+
+    &:hover, &:active, &:focus{
+        color: $text-white;
+        text-decoration: underline;
+        opacity: 1;
+    }
+}
+.footer-main__text{
+    color: $text-white;
+    display: block;
+    font-size: 1.5rem; 
+}
+.footer-main__social{
+    margin: 2rem 0 4rem 0;
+    @include flexbox;
+    @include flex-direction(row);
+}
+.footer-main__social-link{
+    padding:0 5px;
+
+    &:first-child{
+        padding-left: 0;
+    }
+    &:last-child{
+        padding-right: 0;
+    }
+}
+.footer-main__social-icon{
+    background: $bg-dark;
+    color: $text-white;
+    height: 40px;
+    width: 40px;
+    font-size: 2.4rem;
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    border-radius: $border-radius-primary;
+}
+
+/* ========================================================================== */
+/* FOOTER RESPONSIVE */
+/* ========================================================================== */
+
+@media screen and (max-width:768px){
+    .footer-bar{
+        padding: 5rem 0;
+    }
+    .footer-bar__container{
+        display: block;
+    }
+    .footer-bar__email{
+        padding: 0;
+        @include flex-wrap(wrap);
+        @include flex-direction(column);
+    }
+    .footer-bar__notice{
+        text-align: center;
+    }
+    .footer-bar__p{
+        margin-bottom: 20px;
+    }
+    .footer-contacts{
+        @include transform(none);
+    }
+    .footer-main{
+        margin-top: 0;
+    }
+}
+
+.scroll-to-top{
+    display: block;
+    position: fixed;
+    right: 3vw;
+    bottom: 3vw;
+    background: $light-grey;
+    padding: 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    z-index: 8;
+    @include transition(0.3s ease all);
+
+    &:hover{
+        @include box-shadow(0px,0,10px,$black-transparent-25);
+    }
+    & span{
+        height: 10px;
+        width: 10px;
+    }
+}
+@media screen and (max-width:1400px){
+    .scroll-to-top{
+        display: none;
+    }
+}
+
+/* ========================================================================== */
+/* COYPRIGHT */
+/* ========================================================================== */
+
+.copyright{
+    background: rgb(20,30,48);
+    background: -moz-linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+    background: linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#141e30",endColorstr="#243b55",GradientType=1);
+    border-top: 1px solid $white-transparent;
+}
+.copyright__wrap{
+    padding: 2.5rem 0;
+    @include flexbox();
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+}
+.copyright__h5{
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: $text-white;
+    font-weight: 400;
+    @include flex-grow(1);
+    margin: 0;
+}
+.copyright__link{
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: $text-white;
+    font-weight: 400;
+    opacity: 0.8;
+
+    &:hover, &:active, &:focus{
+        color: $text-white;
+        opacity: 1;
+    }
+}
+.copyright__pull{
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: $text-white;
+    font-weight: 400;  
+}
+.copyright__farm{
+    font-size: 13px;
+    color: $text-white;
+    margin: 0;
+    width: 100%;
+}
+.copyright__farm-link{
+    font-size: 13px;
+    color: $text-white;
+    font-weight: 400;
+    opacity: 0.8;
+
+    &:hover, &:active, &:focus{
+        color: $text-white;
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:768px){
+    .copyright{
+        text-align: center;
+    }
+    .copyright__wrap{
+        @include flex-direction(column);
+    }
+    .copyright__pull{
+        float: right;
+        line-height: 1.8;
+    }
+    .copyright__farm{
+        display: none;
+    }
+}

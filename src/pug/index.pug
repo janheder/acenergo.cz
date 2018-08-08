@@ -1,0 +1,192 @@
+doctype html
+include _variables.pug  
+html(lang=lang)
+    head
+        meta(charset="utf-8")
+        meta(content="IE=edge" http-equiv="X-UA-Compatible")
+        meta(content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" name="viewport")
+        title #{title}
+        meta(content="index,follow,snippet,archive" name="robots")
+        meta(content=metaDescription name="description")
+        meta(content=metaKeywords lang="cs" name="keywords")
+        meta(content=metaAuthor name="author")
+
+        link(rel="canonical" href=metaURL)
+        meta(property="og:locale" content="cs_CZ")
+        meta(property="og:type" content="website")
+        meta(property="og:title" content=title)
+        meta(property="og:description" content=metaDescription)
+        meta(property="og:url" content=metaURL)
+        meta(property="og:site_name" content=metaSitename)
+        meta(name="twitter:card" content="summary")
+        meta(name="twitter:site" content=metaTwitterName)
+        meta(name="twitter:title" content=title)
+        meta(name="twitter:description" content=metaDescription)
+        meta(name="twitter:image" content=metaTwitterImg)
+        include _css-include.pug  
+    body
+        include _nav.pug
+        section.hero
+            .container.hero__container
+                h1.hero__title Komplexní řešení v oblasti měření a regulace
+                p.hero__text Vzhledem k vysoké odborné úrovni a dlouholeté praxi našich pracovníků můžeme nabízet služby na profesionální úrovni jak v oblasti poradenské tak realizační.
+                .hero__btns
+                    a.btn.hero__btn(href="#") Produkty v eshopu
+                    a.btn.btn-white.hero__btn(href="#") Kontakty
+
+        section.benefits
+            .container.benefits__container
+                .benefits__wrap
+                    .benefits__single
+                        .benefits__img-wrap
+                            img.benefits__img(src=URLbase+"images/benefits-delivery.svg")
+                        p.benefits__text Široký sortiment léků
+
+                    .benefits__single
+                        .benefits__img-wrap
+                            img.benefits__img(src=URLbase+"images/benefits-stock.svg")
+                        p.benefits__text Zákaznícka karta
+
+                    .benefits__single
+                        .benefits__img-wrap
+                            img.benefits__img(src=URLbase+"images/benefits-gift.svg")
+                        p.benefits__text Odborné poradenství
+
+                    .benefits__single
+                        .benefits__img-wrap
+                            img.benefits__img(src=URLbase+"images/benefits-marker.svg")
+                        p.benefits__text Garance spokojenosti
+
+
+        include _index-categories.pug
+
+        section.index-products
+            .container  
+                .filter-sort
+                    ul.nav.nav-tabs
+                        li.nav-item
+                            a.nav-link.active(id="1-index-tab" data-toggle="tab" href="#1-index" role="tab" aria-controls="1-index" aria-selected="true") Akční nabídka
+                        li.nav-item
+                            a.nav-link(id="2-index-tab" data-toggle="tab" href="#2-index" role="tab" aria-controls="2-index" aria-selected="false") Doporučené
+                        li.nav-item
+                            a.nav-link(id="3-index-tab" data-toggle="tab" href="#3-index" role="tab" aria-controls="3-index" aria-selected="false") Novinky
+                        li.nav-item
+                            a.nav-link(id="4-index-tab" data-toggle="tab" href="#4-index" role="tab" aria-controls="4-index" aria-selected="false") Nejprodávanější
+
+                .tab-content
+                    .tab-pane.fade.show.active(id="1-index" role="tabpanel" aria-labelledby="1-index-tab")            
+                        .swiper-container-4-products-wrap     
+                            .swiper-container-4-products
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug        
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                            .swiper-pagination.swiper-pagination-white
+                            .swiper-button-prev.swiper-button-prev--4
+                            .swiper-button-next.swiper-button-next--4
+
+                    .tab-pane.fade(id="2-index" role="tabpanel" aria-labelledby="2-index-tab")    
+                        .swiper-container-4-products-wrap     
+                            .swiper-container-4-products
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug        
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                            .swiper-pagination.swiper-pagination-white
+                            .swiper-button-prev.swiper-button-prev--4
+                            .swiper-button-next.swiper-button-next--4
+
+                    .tab-pane.fade(id="3-index" role="tabpanel" aria-labelledby="3-index-tab")    
+                        .swiper-container-4-products-wrap     
+                            .swiper-container-4-products
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug        
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                            .swiper-pagination.swiper-pagination-white
+                            .swiper-button-prev.swiper-button-prev--4
+                            .swiper-button-next.swiper-button-next--4
+
+                    .tab-pane.fade(id="4-index" role="tabpanel" aria-labelledby="4-index-tab")    
+                        .swiper-container-4-products-wrap     
+                            .swiper-container-4-products
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug        
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                                    .swiper-slide
+                                        include _single-product-cell.pug
+                            .swiper-pagination.swiper-pagination-white
+                            .swiper-button-prev.swiper-button-prev--4
+                            .swiper-button-next.swiper-button-next--4
+
+
+
+        section.index-about
+            .container
+                .row.index-about__row
+                    .col-12.col-md-6
+                        img.index-about__img(src=URLbase+"img/index-img.png" alt="O naší firmě" title="O naší firmě")
+                    .col-12.col-md-6
+                        h3.index-about__title O naší firmě
+                        p.index-about__text Firma AC Energo s.r.o. vznikla v roce 2003 vyčleněním vývojového oddělení firmy Energo spol. s r.o. Obě firmy spolu nadále úzce spolupracují a navzájem se doplňují v oborech činností. Vzhledem k vysoké odborné úrovni a dlouholeté praxi našich pracovníků můžeme nabízet služby na profesionální úrovni jak v oblasti poradenské tak realizační.
+                        .index-about__btn
+                            a.btn(href="#") Více o nás
+                            a.btn.btn-ghost.btn-ghost--light(href="#") Reference
+
+        include _news-section.pug
+        
+        include _footer.pug
+
+        include _js-include.pug
+
