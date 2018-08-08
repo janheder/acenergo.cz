@@ -818,6 +818,7 @@
     @include align-items(center);
 	margin-bottom: 0rem;
 	opacity: 0.6;
+	display: none;
 }
 .cart-free-shipping__text{
     color: $text-white;
@@ -849,10 +850,8 @@
 
 .delete-acount{
 	background: $bg-red;
-	padding: 5px 10px;
 	color: $text-white;
 	margin-bottom: 2rem;
-	display: block;
 	border-radius: $border-radius-primary;
 
 	&:hover, &:active, &:focus{

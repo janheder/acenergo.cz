@@ -243,6 +243,7 @@
         padding: 0;
         text-align: center;
         @include justify-content(center);
+        @include align-items(center);
     }
     & .single-product-cell__price-old, & .single-product-cell__price-main{
         display: inline-block;
@@ -329,7 +330,7 @@
     background: $bg-blue-alt-2;
 } 
 .product-tags__text.recommended{
-    background: $bg-blue;
+    background: $bg-green;
 }
 .product-tags__text.free-shipping{
     background: $bg-green;

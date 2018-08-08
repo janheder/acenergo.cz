@@ -115,14 +115,6 @@ footer{
     background-size: 20%;
     z-index: 1;
     padding: 10rem 0;
-
-    &::after{
-        content: "";
-        background: $brand-primary;
-        opacity: 0.9;
-        @include absolute-position(0,0,0,0);
-        z-index: -1;
-    }
 }
 .footer-contacts__title{
     color: $text-white;
