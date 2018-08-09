@@ -233,20 +233,32 @@ html(lang=lang)
                                 .product-detail-main__btns
 
                                     .product-detail-main__btns-single(data-toggle="modal" data-target="#modal-question") #[span.product-detail-main__btns-icon #[span.fas.fa-question]] Dotaz k produktu
+        
 
-                    .product-description(id="anchor-product-detail-description")
-                        ul.nav.nav-tabs.product-description__nav(role="tablist")
-                            li.nav-item.product-description__tab
-                                a.nav-link.product-description__tab-link.active(data-toggle="tab" href="#product-description-1" role="tab") Popis produktu
-                            li.nav-item.product-description__tab
-                                a.nav-link.product-description__tab-link(data-toggle="tab" href="#product-description-3" role="tab") Přílohy produktu
+                .product-detail-responsive
+                    .product-detail-responsive__name
+                        p.product-detail-responsive__title #{ProductName}
+                        h3.product-detail-responsive__price #[span 16 989] Kč
+                    .product-detail-responsive__btn-wrap
+                        a.btn.product-detail-responsive__btn(onclick="$('#product_detail_form').submit();") Do košíku
 
 
-                        .tab-content.product-description__wrap
+            .product-description
+    
+                .product-description__inner(id="anchor-product-detail-description")
+                    ul.nav.nav-tabs.product-description__nav(role="tablist")
+                        li.nav-item.product-description__tab
+                            a.nav-link.product-description__tab-link.active(data-toggle="tab" href="#product-description-1" role="tab") Popis produktu
+                        li.nav-item.product-description__tab
+                            a.nav-link.product-description__tab-link(data-toggle="tab" href="#product-description-3" role="tab") Přílohy produktu
 
-                            .tab-pane.product-description__tab-content.active(id="product-description-1" role="tabpanel" aria-expanded="true")
-                                a.product-description__collapse(data-toggle="collapse" href="#product-description-c-1" aria-controls="product-description-c-1" aria-expanded="true") Popis produktu
-                                .panel-collapse.collapse.show.product-description__collapse-wrap(id="product-description-c-1")
+            
+                    .tab-content.product-description__wrap
+
+                        .tab-pane.product-description__tab-content.active(id="product-description-1" role="tabpanel" aria-expanded="true")
+                            a.product-description__collapse(data-toggle="collapse" href="#product-description-c-1" aria-controls="product-description-c-1" aria-expanded="true") Popis produktu
+                            .panel-collapse.collapse.show.product-description__collapse-wrap(id="product-description-c-1")
+                                .container
                                     .product-description__content
                                         .product-description__text
                                             strong Popis
@@ -258,21 +270,17 @@ html(lang=lang)
                                             strong Složení
                                             p Přípravek obsahuje termální vodu Avene, bambucké máslo, meiboserin, lipomucin.
 
-                            .tab-pane.product-description__tab-content(id="product-description-3" role="tabpanel" aria-expanded="false")
-                                a.product-description__collapse.collapsed(data-toggle="collapse" href="#product-description-c-3" aria-controls="product-description-c-3" aria-expanded="false") Přílohy produktu
-                                .panel-collapse.collapse.product-description__collapse-wrap(id="product-description-c-3")
+                        .tab-pane.product-description__tab-content(id="product-description-3" role="tabpanel" aria-expanded="false")
+                            a.product-description__collapse.collapsed(data-toggle="collapse" href="#product-description-c-3" aria-controls="product-description-c-3" aria-expanded="false") Přílohy produktu
+                            .panel-collapse.collapse.product-description__collapse-wrap(id="product-description-c-3")
+                                .container
                                     .product-description__content
+
                                         a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
                                         a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
                                         a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
                                         a.product-description__file(href="#") #[span.fas.fa-download] [PDF] Příloha pro produkt (23KB)
 
-                .product-detail-responsive
-                    .product-detail-responsive__name
-                        p.product-detail-responsive__title #{ProductName}
-                        h3.product-detail-responsive__price #[span 16 989] Kč
-                    .product-detail-responsive__btn-wrap
-                        a.btn.product-detail-responsive__btn(onclick="$('#product_detail_form').submit();") Do košíku
 
 
         .product-similar

@@ -6,10 +6,11 @@
     font-size: 1.5rem;
     line-height: 3rem;
     padding:0.5rem 1.5rem;
-    height: 4.6rem;
+    height: 4.8rem;
     font-weight: 400;
     border-radius: $border-radius-primary;
-    border: 1px solid $border-grey;
+    border: 0px solid $border-grey;
+    @include box-shadow(0px, 2px, 3px, rgba(0,0,0,0.05));
     color: $text-primary;
 
     &.btn{
@@ -38,6 +39,7 @@
     }
     &:focus{
         color: $text-primary;  
+        @include box-shadow(0px, 0px, 0px, rgba(0,0,0,0.05));
     }
 }
 textarea.form-control{
@@ -107,7 +109,8 @@ select.form-control:not([size]):not([multiple]) {
 .form-check__label{
     padding: 1.1rem 2rem 1.1rem 4rem;
     min-height: 4.6rem;
-    border: 1px solid $border-grey;
+    border: 0px solid $border-grey;
+    @include box-shadow(0px, 2px, 3px, rgba(0,0,0,0.05));
     position: relative;
     background: $white;
     font-weight: 500;
@@ -121,8 +124,9 @@ select.form-control:not([size]):not([multiple]) {
     line-height: 1.5;
 
     &.disabled{
-        background: $bg-light;
+        background: $bg-white;
         color: $black-transparent-50;
+        @include box-shadow(0px, 0px, 0px, rgba(0,0,0,0.05));
 
         & .form-check__price{
             color: $text-primary;

@@ -35,7 +35,11 @@
 /* ========================================================================== */
 /* PRODUCT DETAIL TOP PART */
 /* ========================================================================== */
-
+.product-detail{
+    background: $bg-light;
+    margin-top: -4rem;
+    padding-bottom: 6rem;
+}
 .product-detail__name{
     display: block;
 }
@@ -43,7 +47,7 @@
     margin-bottom: 1.5rem;
     font-size: 4rem;
     font-family: $font-family-alt;
-    padding-top: 20px;
+    padding-top: 40px;
     font-weight: 400;
     color: $text-primary;
 }
@@ -221,7 +225,7 @@
     @include align-items(center);
     font-weight: 600;
     height: 100%;
-    background: $light-grey;
+    background: $bg-white;
     padding: 0 10px;
     border: 0;
     cursor: pointer;
@@ -246,8 +250,10 @@
 
 .product-detail-main{
     display: block;
-    background: $bg-light;
+    background: $bg-white;
     padding: 3rem;
+    @include box-shadow(0px, 2px, 3px, rgba(0,0,0,0.05));
+    border-radius: $border-radius-primary;
 }
 .product-detail-main__price-wrap{
     padding: 3rem 0 3rem 0;
@@ -313,11 +319,11 @@
     margin-top: 10px;
 }
 .product-detail-main__cta{
-    padding: 2rem;
+    padding: 0;
     @include flexbox();
     @include flex-direction(row);
-    background: $bg-white;
     margin-bottom: 3rem;
+    margin-top: 3rem;
     border-radius: $border-radius-primary;
 }
 .product-detail-main__cta-number-stepper{
@@ -376,7 +382,7 @@
     font-size: 1.8rem;
 }
 .product-detail-main__description{
-    padding: 0 0 2rem 0;
+    padding: 0 0 3rem 0;
 }
 .product-detail-main__description-text{
     margin: 0;
@@ -543,17 +549,19 @@
 /* ========================================================================== */
 
 .product-description{
-    margin: 6rem 0;
+    margin: 0;
+    background: $bg-light;;
 }
 .product-description__wrap{
-    border: 1px solid $border-grey;
+    border: 0;
     padding: 0;
+    background: $bg-white;
 }
 .product-description__collapse{
     display: none;  
 }
 .product-description__content{
-    padding: 2rem;
+    padding: 6rem 0 2rem 0;
 }
 .product-description__nav{
     border: 0;

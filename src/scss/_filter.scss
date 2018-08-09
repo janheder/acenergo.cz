@@ -47,9 +47,10 @@
 }
 
 .filter-main{
-	background: $light-grey;
-    border: 1px solid $border-grey;
+	background: $bg-light;
+    border-bottom: 1px solid $border-grey;
     margin-bottom: 2rem;
+    padding: 4rem 0;
     border-radius: $border-radius-primary;
 }
 .filter-main__collapse{
@@ -58,6 +59,9 @@
 .filter-main__heading{
     display: block;
     width: 100%;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
 }
 .filter-main__heading--tag{
     padding-left: 5px;
@@ -99,15 +103,15 @@
     color: $orange-main;
 }
 .filter-main__button{
-    width: 100%;
     margin-top: 0px;
+
 }
 .filter-main__form{
-    padding: 2rem;
+    padding: 0rem;
 }
 .filter-main__collapse-toggle{
     background: $white;
-    border: 1px solid $border-primary;
+    border: 0px solid $border-primary;
     margin: 5px;
     cursor: pointer;
     position: relative;
@@ -117,6 +121,7 @@
     font-size: 1.5rem;
     line-height: 1.5;
     border-radius: $border-radius-primary;
+    @include box-shadow(0px, 2px, 3px, rgba(0,0,0,0.05));
 }
 .filter-main__collapse-toggle[aria-expanded="true"] .filter-main__icon::before{
     display: none;
@@ -152,6 +157,7 @@
         display: block;
         background: $brand-primary;
         padding: 2rem;
+        margin-bottom: 2rem;
         font-size: 1.6rem;
         font-weight: 700;
         color: $text-white;

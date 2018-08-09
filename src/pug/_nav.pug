@@ -11,11 +11,72 @@ header
 			img.navbar-brand__img-responsive(src=URLbase+"images/logo.svg" alt=metaSitename)
 
 		.navbar-menu
-			a.navbar-menu__link(href="#") Produkty
-			a.navbar-menu__link(href="#") O nás
-			a.navbar-menu__link(href="#") Novinky
-			a.navbar-menu__link(href="#") Ke stažení
-			a.navbar-menu__link(href="#") Kontakty
+			li.nav-item.navbar-menu__nav-item
+				.dropdown.nav-item__dropdown
+					a.dropdown-toggle.nav-link.navbar-menu__link(id="navDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Produkty
+					.dropdown-menu.nav-item__dropdown-menu(aria-labelledby="navDropdown1")
+						.container.nav-item__container
+							.row.nav-item__row
+
+								.col-12.col-md-6.dropdown-column
+									h4.dropdown-column__main-title Hardware MaR
+									.dropdown-column__items
+										a.dropdown-item.dropdown-column__link(href="#")
+											h5.dropdown-column__title M-Bus (Meter-Bus)
+										a.dropdown-item.dropdown-column__link(href="#")
+											h5.dropdown-column__title M-Bus (Meter-Bus)
+										a.dropdown-item.dropdown-column__link(href="#")
+											h5.dropdown-column__title M-Bus (Meter-Bus)
+
+								.col-12.col-md-6.dropdown-column
+									h4.dropdown-column__main-title Software MaR
+									.dropdown-column__items
+										a.dropdown-item.dropdown-column__link(href="#")
+											h5.dropdown-column__title M-Bus (Meter-Bus)
+										a.dropdown-item.dropdown-column__link(href="#")
+											h5.dropdown-column__title M-Bus (Meter-Bus)
+										a.dropdown-item.dropdown-column__link(href="#")
+											h5.dropdown-column__title M-Bus (Meter-Bus)
+
+			li.nav-item.navbar-menu__nav-item
+				.dropdown.nav-item__dropdown
+					a.dropdown-toggle.nav-link.navbar-menu__link(id="navDropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") O nás
+					.dropdown-menu.nav-item__dropdown-menu(aria-labelledby="navDropdown2")
+						.container.nav-item__container
+							.row.nav-item__row
+								.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.nav-item__column.dropdown-column
+									a.dropdown-item.dropdown-column__link(href="#")
+										h5.dropdown-column__title #[span.icon-logo.dropdown-column__icon] Masti, krémy a gely
+								.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+									a.dropdown-item.dropdown-column__link(href="#")
+										h5.dropdown-column__title #[span.icon-logo.dropdown-column__icon] Masti, krémy a gely
+								.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+									a.dropdown-item.dropdown-column__link(href="#")
+										h5.dropdown-column__title #[span.icon-logo.dropdown-column__icon] Masti, krémy a gely
+								.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+									a.dropdown-item.dropdown-column__link(href="#")
+										h5.dropdown-column__title #[span.icon-logo.dropdown-column__icon] Masti, krémy a gely
+								.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+									a.dropdown-item.dropdown-column__link(href="#")
+										h5.dropdown-column__title #[span.icon-logo.dropdown-column__icon] Masti, krémy a gely
+								.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+									a.dropdown-item.dropdown-column__link(href="#")
+										h5.dropdown-column__title #[span.icon-logo.dropdown-column__icon] Masti, krémy a gely
+								.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+									a.dropdown-item.dropdown-column__link(href="#")
+										h5.dropdown-column__title #[span.icon-logo.dropdown-column__icon] Masti, krémy a gely
+								.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+									a.dropdown-item.dropdown-column__link(href="#")
+										h5.dropdown-column__title #[span.icon-logo.dropdown-column__icon] Masti, krémy a gely
+								.col-12.col-sm-12.col-md-12.col-lg-3.col-xl-3.dropdown-column
+									a.dropdown-item.dropdown-column__link(href="#")
+										h5.dropdown-column__title #[span.icon-logo.dropdown-column__icon] Masti, krémy a gely
+			li.nav-item.navbar-menu__nav-item
+				a.nav-link.navbar-menu__link(href="#") Novinky
+			li.nav-item.navbar-menu__nav-item
+				a.nav-link.navbar-menu__link(href="#") Ke stažení
+			li.nav-item.navbar-menu__nav-item
+				a.nav-link.navbar-menu__link(href="#") Kontakty
 
 		.navbar-search-responsive-toggler(id="search-toggler-responsive")
 			span.search-icon.white

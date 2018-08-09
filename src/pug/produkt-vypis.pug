@@ -51,7 +51,8 @@ html(lang=lang)
                         .col-12.col-sm-6.col-md-4.col-lg-3.col-xl-3
                             a.subcategories-grid__single(href="#") #[span.caret-icon.right.subcategories-grid__icon] Ipsum dolor
 
-                .top-products
+            .top-products
+                .container
                     .top-products__title-wrap
                         h2.top-products__title Nejprodávanější produkty
                     .swiper-container-5-products-wrap
@@ -75,8 +76,9 @@ html(lang=lang)
                                     include _single-product-cell-top.pug
                         .swiper-button-prev.swiper-button-prev--5
                         .swiper-button-next.swiper-button-next--5
-
-                .filter-main
+            
+            .filter-main
+                .container
                     a.filter-main__collapse(data-toggle="collapse" href="#product-filter" aria-expanded="false" aria-controls="product-filter") Filtr produktů
                     .panel-collapse.collapse.filter-main__collapse-wrap(id="product-filter")   
                         form.filter-main__form(method="post" action="")
@@ -97,52 +99,17 @@ html(lang=lang)
                                         input.form-check__input(type="checkbox" name="filter-doporucene") 
                                         | Doporučujeme
                                         span.form-check__box.checkbox
-
-                                h2.form-group.filter-main__single.filter-main__collapse-toggle(data-toggle="collapse" href="#filter-main-brand" aria-expanded="false" aria-controls="filter-main-brand") Filtrovat podle výrobce
-                                    span.plus-icon.filter-main__icon 
-
-
-                            .filter-main__brand
-                                .collapse.filter-main__brand-collapse(id="filter-main-brand")
-                                    .filter-main__brand-collapse-wrap
-                                        .form-group.filter-main__single
-                                            label.form-check__label.filter-main__label
-                                                input.form-check__input(type="checkbox" name="#") 
-                                                | Advance Acoustic
-                                                span.form-check__box.checkbox                         
-                                        .form-group.filter-main__single
-                                            label.form-check__label.filter-main__label
-                                                input.form-check__input(type="checkbox" name="#") 
-                                                | Advance Acoustic
-                                                span.form-check__box.checkbox 
-                                        .form-group.filter-main__single
-                                            label.form-check__label.filter-main__label
-                                                input.form-check__input(type="checkbox" name="#") 
-                                                | Advance Acoustic
-                                                span.form-check__box.checkbox                         
-                                        .form-group.filter-main__single
-                                            label.form-check__label.filter-main__label
-                                                input.form-check__input(type="checkbox" name="#") 
-                                                | Advance Acoustic
-                                                span.form-check__box.checkbox 
-                                        .form-group.filter-main__single
-                                            label.form-check__label.filter-main__label
-                                                input.form-check__input(type="checkbox" name="#") 
-                                                | Advance Acoustic
-                                                span.form-check__box.checkbox 
-                                        .form-group.filter-main__single
-                                            label.form-check__label.filter-main__label
-                                                input.form-check__input(type="checkbox" name="#") 
-                                                | Advance Acoustic
-                                                span.form-check__box.checkbox                         
-                                        .form-group.filter-main__single
-                                            label.form-check__label.filter-main__label
-                                                input.form-check__input(type="checkbox" name="#") 
-                                                | Advance Acoustic
-                                                span.form-check__box.checkbox 
-
+                                        
                             button.btn.filter-main__button(type="submit") Filtrovat produkty
+           
 
+
+
+
+
+
+
+            .container
                 .filter-badges
                     .filter-badges__single 
                         p.filter-badges__title Filtr prvek
@@ -178,7 +145,7 @@ html(lang=lang)
 
                 include _pagination.pug
 
-        include _news-section.pug
+ 
 
         include _footer.pug
 

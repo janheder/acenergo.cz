@@ -19,6 +19,9 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#141e30",endColorstr="#243b55",GradientType=1);
     text-align: center;
 }
+.hero__bg{
+    opacity: 0.05;
+}
 .hero__title{
     font-weight: 300;
     font-family: $font-family-secondary;
@@ -41,11 +44,11 @@
 
 @media screen and (max-width:991px){
     .hero {
-        padding: 0;
+        padding: 5rem 0;
     }
     .hero__container{
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .swiper-pagination--hero{
         display: block;
@@ -153,6 +156,7 @@
     @include flex-basis(0);
     border: 1px solid $brand-primary;
     height: 100%;
+    width: 100%;
 }
 .benefits__img-wrap{
     background: transparent;
@@ -184,7 +188,6 @@
         @include flex-wrap(wrap);
     }
     .benefits__single{
-        width: 50%;
         @include flex-grow(1);
         @include flex-basis(auto);
         margin: 10px 0;
@@ -491,7 +494,7 @@
 
 .page-heading--category{ 
     padding: 4rem 0 0 0;
-    background: $bg-white;
+    background: $bg-light;
 
     &::after{
         content: none;
@@ -507,6 +510,7 @@
 .page-heading--category__subtitle-excerpt, .page-heading--category__subtitle{ 
     color: $text-primary;
     text-align: left;
+    margin: 0;
 }
 .page-heading--category__toggle{
     color: $brand-primary;

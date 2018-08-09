@@ -147,13 +147,13 @@ div[class*=' col-']{
 }
 
 main{
-    background: $bg-white;
+    background: $bg-light;
     padding:4rem 0;
 }
 
 @media screen and (max-width:768px){
     main{
-        background: $bg-white;
+        background: $bg-light;
         padding: 20px 0;
         /*
         .container{
@@ -165,7 +165,7 @@ main{
 }
 @media screen and (max-width:575px){
     main{
-        padding: 0;
+        padding: 10px 0;
     }
 }
 
