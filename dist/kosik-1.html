@@ -117,29 +117,14 @@
             </div>
           </li>
           <li class="nav-item navbar-menu__nav-item">
-            <div class="dropdown nav-item__dropdown"><a class="dropdown-toggle nav-link navbar-menu__link" id="navDropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">O nás</a>
+            <div class="dropdown nav-item__dropdown"><a class="dropdown-toggle nav-link navbar-menu__link" id="navDropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">O nás <span class="caret-icon white navbar-menu__caret"></span></a>
               <div class="dropdown-menu nav-item__dropdown-menu" aria-labelledby="navDropdown2">
                 <div class="container nav-item__container">
-                  <div class="row nav-item__row">
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 nav-item__column dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
-                        <h5 class="dropdown-column__title"><span class="icon-logo dropdown-column__icon"></span> Masti, krémy a gely</h5></a></div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
-                        <h5 class="dropdown-column__title"><span class="icon-logo dropdown-column__icon"></span> Masti, krémy a gely</h5></a></div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
-                        <h5 class="dropdown-column__title"><span class="icon-logo dropdown-column__icon"></span> Masti, krémy a gely</h5></a></div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
-                        <h5 class="dropdown-column__title"><span class="icon-logo dropdown-column__icon"></span> Masti, krémy a gely</h5></a></div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
-                        <h5 class="dropdown-column__title"><span class="icon-logo dropdown-column__icon"></span> Masti, krémy a gely</h5></a></div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
-                        <h5 class="dropdown-column__title"><span class="icon-logo dropdown-column__icon"></span> Masti, krémy a gely</h5></a></div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
-                        <h5 class="dropdown-column__title"><span class="icon-logo dropdown-column__icon"></span> Masti, krémy a gely</h5></a></div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
-                        <h5 class="dropdown-column__title"><span class="icon-logo dropdown-column__icon"></span> Masti, krémy a gely</h5></a></div>
-                    <div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 dropdown-column"><a class="dropdown-item dropdown-column__link" href="#">
-                        <h5 class="dropdown-column__title"><span class="icon-logo dropdown-column__icon"></span> Masti, krémy a gely</h5></a></div>
-                  </div>
+                  <div class="dropdown-column__items"><a class="dropdown-item dropdown-column__link" href="#">
+                      <h5 class="dropdown-column__title">Výroba</h5></a><a class="dropdown-item dropdown-column__link" href="#">
+                      <h5 class="dropdown-column__title">Programování</h5></a><a class="dropdown-item dropdown-column__link" href="#">
+                      <h5 class="dropdown-column__title">Vývoj</h5></a><a class="dropdown-item dropdown-column__link" href="#">
+                      <h5 class="dropdown-column__title">Reference</h5></a></div>
                 </div>
               </div>
             </div>
@@ -455,10 +440,39 @@
         </div>
       </div>
     </main><a class="scroll-to-top" href="#anchor-navbar-top"><span class="caret-icon top"></span></a>
+    <div class="modal fade" id="modal-contact" tabindex="-1" role="dialog" aria-labelledby="modal-contact" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-contact-heading">Dotaz na produkt</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span class="cross-icon"></span></button>
+          </div>
+          <div class="modal-body">
+            <form method="post" action="" name="question_form">
+              <div class="form-group">
+                <label for="question_form_name">Vaše jméno</label>
+                <input class="form-control" type="text" name="question_form_name" id="question_form_name" required autocomplete="given-name">
+              </div>
+              <div class="form-group">
+                <label for="question_form_email">Váš email</label>
+                <input class="form-control" type="email" name="question_form_email" id="question_form_email" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="question_form_email">Váš dotaz</label>
+                <textarea class="form-control" rows="4" name="question_form_text" id="question_form_text" required></textarea>
+              </div>
+              <div class="form-group">
+                <button class="form-control btn" type="submit" name="question_form_submit" id="question_form_submit">Odeslat dotaz</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer>
       <section class="footer-contacts post__image-container">
         <div class="container footer-contacts__container">
-          <h2 class="footer-contacts__title">V případě dotazů nás kontaktujte pomocí <a href="#">kontaktního formuláře</a> nebo na <a href="#">stránce kontakty</a></h2><img class="post__featured-image" src="img/bg-cta.png">
+          <h2 class="footer-contacts__title">V případě dotazů nás kontaktujte pomocí <a href="#" data-toggle="modal" data-target="#modal-contact">kontaktního formuláře</a> nebo na <a href="#">stránce kontakty</a></h2><img class="post__featured-image" src="img/bg-cta.png">
         </div>
       </section>
       <section class="footer-main">

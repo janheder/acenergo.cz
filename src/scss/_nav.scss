@@ -1230,6 +1230,16 @@
         line-height: 1.5;
         color: $text-primary;
     }
+    .navbar-menu__caret{
+        width: 8px;
+        height: 8px;
+        margin-left: 5px;
+        @include transition(0s ease all);
+    }
+    .nav-item__dropdown.show .navbar-menu__caret, .nav-item__dropdown:hover .navbar-menu__caret{
+        border-top: 2px solid $bg-dark;
+        border-right: 2px solid $bg-dark;
+    }
     .dropdown-column__icon{
         display: inline-block;
         height: 12px;

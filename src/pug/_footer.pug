@@ -1,11 +1,14 @@
 a.scroll-to-top(href="#anchor-navbar-top")
     span.caret-icon.top
 
+include _modal-contact.pug
+
+
 footer
 
     section.footer-contacts.post__image-container
         .container.footer-contacts__container
-            h2.footer-contacts__title V případě dotazů nás kontaktujte pomocí #[a(href="#") kontaktního formuláře] nebo na #[a(href="#") stránce kontakty]
+            h2.footer-contacts__title V případě dotazů nás kontaktujte pomocí #[a(href="#" data-toggle="modal" data-target="#modal-contact") kontaktního formuláře] nebo na #[a(href="#") stránce kontakty]
             img.post__featured-image(src=URLbase+"img/bg-cta.png")
 
             
