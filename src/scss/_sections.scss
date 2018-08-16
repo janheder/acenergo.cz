@@ -11,17 +11,31 @@
     @include flexbox;
     @include flex-direction(column);
     @include justify-content(center);
-    background: $bg-white;
     background: rgb(20,30,48);
     background: -moz-linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
     background: -webkit-linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
     background: linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#141e30",endColorstr="#243b55",GradientType=1);
     text-align: center;
+
+    &::after{
+        background: rgb(20,30,48);
+        background: -moz-linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+        background: linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#141e30",endColorstr="#243b55",GradientType=1);
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        opacity: 0.9;
+        z-index: 1;
+    }
 }
-.hero__bg{
-    opacity: 0.05;
-}
+
+
 .hero__title{
     font-weight: 300;
     font-family: $font-family-secondary;
@@ -30,6 +44,8 @@
     margin: 0;
     margin-bottom: 2rem;
     line-height: 1.2;
+    z-index: 2;
+    position: relative;
 }
 .hero__text{
     font-weight: 400;
@@ -37,9 +53,19 @@
     font-size: 1.8rem;
     margin: 1rem auto 4rem auto;
     max-width: 79rem;
+    z-index: 2;
+    position: relative;
+}
+.hero__btns{
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(center);
 }
 .hero__btn{
     margin: 10px;
+    z-index: 2;
+    position: relative;
+    height: 5.4rem;
 }
 
 @media screen and (max-width:991px){
@@ -583,6 +609,12 @@
     line-height: 3rem;
     margin-bottom: 2rem;
 }
+.index-about__btn{
+    @include flexbox();
+    @include align-items(center);
+    @include justify-content(flex-start);
+}
 .index-about__btn .btn{
     margin-right: 10px;
+    height: 5.4rem;
 }
