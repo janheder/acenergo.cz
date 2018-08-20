@@ -92,6 +92,11 @@
     font-size: 2.4rem;
     line-height: 2rem;
 }
+.single-product-cell__price-empty{
+    margin-right: 5px;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
 .single-product-cell__form{
     @include flexbox();
     @include flex-direction(row); 
