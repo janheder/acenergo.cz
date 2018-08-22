@@ -130,6 +130,10 @@
     @include transition(0.3s all ease);
     border-bottom: 1px solid $white-transparent;
 }
+.navbar-main--index{
+    position: absolute;
+    background: transparent;
+}
 .navbar-main__container {
     height: 100%;
 }
@@ -1233,7 +1237,7 @@
     .navbar-menu__caret{
         width: 8px;
         height: 8px;
-        margin-left: 5px;
+        margin-left: 10px;
         @include transition(0s ease all);
     }
     .nav-item__dropdown.show .navbar-menu__caret, .nav-item__dropdown:hover .navbar-menu__caret{
