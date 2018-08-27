@@ -132,7 +132,7 @@
 }
 .navbar-main--index{
     position: absolute;
-    background: transparent;
+    background: rgba(20,30,48,0.3);
 }
 .navbar-main__container {
     height: 100%;
@@ -1406,6 +1406,25 @@
         }
     }
 }
+@media screen and (min-width:992px){
+    .dropdown .navbar-menu__link{
+        display: none;
+    }
+    .dropdown .navbar-menu__link--desktop{
+        display: flex;
+    }
+    .dropdown {
+
+        &:hover, &:active, &:focus{
+
+            .navbar-menu__link--desktop{
+                background: $bg-white;
+                color: $text-primary;
+                z-index: 8;
+            }
+        }
+    }
+}
 /* ========================================================================== */
 /* OFFCANVAS NAVIGATION RESPONSIVE */
 /* ========================================================================== */
@@ -1433,6 +1452,19 @@ body.active-right {
         display: block;
         top: 0;
         left: 0;
+    }
+    .dropdown .navbar-menu__link--desktop{
+        display: none;
+    }
+    .navbar-main--index{
+        background: rgb(20,30,48);
+        background: -moz-linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+        background: linear-gradient(90deg, rgba(20,30,48,1) 0%, rgba(36,59,85,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#141e30",endColorstr="#243b55",GradientType=1);
+    }
+    .navbar-menu__caret{
+        display: none;
     }
     body.active {
         overflow: hidden;

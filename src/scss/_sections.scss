@@ -30,7 +30,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        opacity: 0.9;
+        opacity: 0.85;
         z-index: 1;
     }
 }
@@ -183,6 +183,10 @@
     border: 1px solid $brand-primary;
     height: 100%;
     width: 100%;
+    &:hover, &:active, &:focus{
+        text-decoration: none;
+        border: 1px solid $bg-dark;
+    }
 }
 .benefits__img-wrap{
     background: transparent;
@@ -208,6 +212,7 @@
     font-weight: 500;
     max-width: 200px;
     text-align: center;
+    color: $text-primary;
 }
 @media screen and (max-width:991px){
     .benefits__container{
