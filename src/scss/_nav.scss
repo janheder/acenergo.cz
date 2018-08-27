@@ -1180,6 +1180,9 @@
             @include translate(-50%,0);
         }
     }
+    .nav-item__dropdown-menu--links::after{
+        content: none;
+    }
     .nav-item__container{
         position: relative;
         width: 100%;
