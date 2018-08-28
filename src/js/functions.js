@@ -157,7 +157,7 @@ $(".navbar-cart__toggle").click(function() {
     $("#dark-overlay-cart").toggleClass("active");
 });
 
-$("#dark-overlay-cart").click(function() { 
+$("#dark-overlay-cart, .navbar-cart__toggle-off").click(function() { 
     $("body").toggleClass("active-right");
     $("#dark-overlay-cart").toggleClass("active");
 });

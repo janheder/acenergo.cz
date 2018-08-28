@@ -705,6 +705,32 @@
     display: block;
     z-index: 5; 
 }
+.navbar-cart__toggle-off{
+    position: absolute;
+    height: 74px;
+    width: 82px;
+    right: 0;
+    top: 0;
+    background: $brand-primary;
+    @include flexbox();
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+}
+@media screen and (max-width:991px){
+    .navbar-cart__toggle-off{
+        height: 55px;
+        width: 56px;
+    }
+}
+body.active-right{
+    .navbar-cart__toggle-off{
+        display: flex;
+    }
+}
 
 /* ========================================================================== */
 /* NAVIGATION MAIN RESPONSIVE */
