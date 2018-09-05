@@ -185,7 +185,7 @@
 .navbar-search__input-icon{
     @include translate(0%, -50%);
     left: 5rem;
-    z-index: 9;
+    z-index: 1;
     height: 14px;
     width:14px;
     opacity: 0.5;
@@ -388,6 +388,8 @@
 .navbar-user__dropdown-menu{
     margin: 0;
     border: 0;
+    right: 0;
+    left: auto;
     border-radius: $border-radius-primary;
     min-width: 100%;
     @include box-shadow(0px,0,10px,$black-transparent-25);
@@ -879,9 +881,6 @@ body.active-right{
         &::before, &::after{
              content: none !important;
         }
-    }
-    .navbar-user__text-wrap{
-        display: none;
     }
     .navbar-user__icon{
         margin-right: 0px;

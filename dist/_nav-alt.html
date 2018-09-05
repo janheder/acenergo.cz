@@ -73,76 +73,24 @@
         </div>
       </div>
     </div>
-    <!--
-    .navbar-user
-    	.dropdown.navbar-user__dropdown
-    		.dropdown-toggle.navbar-user__dropdown-toggle(id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-    			span.user-icon.navbar-user__icon
-    			.navbar-user__text-wrap
-    				p.navbar-user__text Petroslav Novakovič
-    			span.caret-icon.navbar-user__caret
-    		.dropdown-menu.dropdown-menu-left.navbar-user__dropdown-menu(aria-labelledby="userDropdown")
-    			a.dropdown-item.navbar-user__item(href="#") Detail účtu
-    			a.dropdown-item.navbar-user__item(href="#") Historie objednávek
-    			a.dropdown-item.navbar-user__item(href="#") Odhlásit
-    			
-    
-    -->
-    <div class="navbar-user"><a class="navbar-user__link" data-toggle="modal" data-target="#modal-login"><span class="user-icon white navbar-user__icon"></span></a></div>
-    <div class="navbar-cart"><span class="navbar-cart__toggle"></span><a class="navbar-cart__link" href="#"><span class="cart-icon-nav navbar-cart__cart-icon"><span class="navbar-cart__icon-number">3</span></span></a>
+    <div class="navbar-user">
+      <div class="dropdown navbar-user__dropdown navbar-user__link">
+        <div class="dropdown-toggle navbar-user__dropdown-toggle" id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="navbar-user__text-wrap"><span class="user-icon white navbar-user__icon"></span></div><span class="caret-icon white navbar-user__caret"></span>
+        </div>
+        <div class="dropdown-menu dropdown-menu-left navbar-user__dropdown-menu" aria-labelledby="userDropdown"><a class="dropdown-item navbar-user__item" href="#">Detail účtu</a><a class="dropdown-item navbar-user__item" href="#">Historie objednávek</a><a class="dropdown-item navbar-user__item" href="#">Odhlásit</a></div>
+      </div>
+    </div>
+    <div class="navbar-cart"><span class="navbar-cart__toggle"></span><a class="navbar-cart__link" href="#"><span class="cart-icon-nav navbar-cart__cart-icon"><span class="navbar-cart__icon-number">0</span></span></a>
       <div class="navbar-cart__dropdown">
-        <div class="navbar-cart__dropdown-inner"><a class="navbar-cart__dropdown-item navbar-cart-item" href="#">
-            <div class="navbar-cart-item__img-wrap"><img class="lazy navbar-cart-item__img" src="undefinedimg/placeholder-60x60.png" data-src="undefinedimg/product-thumb-small.jpg" alt="#" title="#"/></div>
-            <div class="navbar-cart-item__text-wrap">
-              <h5 class="navbar-cart-item__title"></h5>
-              <p class="navbar-cart-item__text">3 kusy</p>
-              <div class="navbar-cart-item__price-wrap">
-                <div class="navbar-cart-item__price-old">1099 Kč</div>
-                <div class="navbar-cart-item__price-main">899 Kč</div>
-              </div>
-            </div></a><a class="navbar-cart__dropdown-item navbar-cart-item" href="#">
-            <div class="navbar-cart-item__img-wrap"><img class="lazy navbar-cart-item__img" src="undefinedimg/placeholder-60x60.png" data-src="undefinedimg/product-thumb-small.jpg" alt="#" title="#"/></div>
-            <div class="navbar-cart-item__text-wrap">
-              <h5 class="navbar-cart-item__title"></h5>
-              <p class="navbar-cart-item__text">3 kusy</p>
-              <div class="navbar-cart-item__price-wrap">
-                <div class="navbar-cart-item__price-old">1099 Kč</div>
-                <div class="navbar-cart-item__price-main">899 Kč</div>
-              </div>
-            </div></a><a class="navbar-cart__dropdown-item navbar-cart-item" href="#">
-            <div class="navbar-cart-item__img-wrap"><img class="lazy navbar-cart-item__img" src="undefinedimg/placeholder-60x60.png" data-src="undefinedimg/product-thumb-small.jpg" alt="#" title="#"/></div>
-            <div class="navbar-cart-item__text-wrap">
-              <h5 class="navbar-cart-item__title"></h5>
-              <p class="navbar-cart-item__text">3 kusy</p>
-              <div class="navbar-cart-item__price-wrap">
-                <div class="navbar-cart-item__price-old">1099 Kč</div>
-                <div class="navbar-cart-item__price-main">899 Kč</div>
-              </div>
-            </div></a>
-          <div class="navbar-cart__dropdown-price-summary navbar-cart-price">
-            <p class="navbar-cart-price__text">Celková cena<span class="navbar-cart-price__small">Včetně DPH</span></p>
-            <h4 class="navbar-cart-price__title">2697 Kč</h4>
+        <div class="navbar-cart__dropdown-inner">
+          <div class="navbar-cart__dropdown-empty">
+            <h3 class="navbar-cart__dropdown-empty-title">Váš košík je prázdný</h3>
+            <p class="navbar-cart__dropdown-empty-text">Před nákupem prosím do svého košíku vložte produkt</p>
           </div>
-          <div class="navbar-cart__dropdown-delivery navbar-cart-delivery"> 
-            <div class="navbar-cart-delivery__text-wrap">
-              <p class="navbar-cart-delivery__text">Nakupte ještě za 303 Kč a máte Dopravu zdarma</p>
-            </div>
-          </div>
-          <div class="navbar-cart__dropdown-checkout-btn navbar-cart-checkout-btn"><a class="btn btn-grey btn-ghost-grey navbar-cart-checkout-btn__button" href="#"><span class="cross-icon navbar-cart-checkout-btn__button-icon"></span> Vyprázdnit</a><a class="btn navbar-cart-checkout-btn__button" href="#">Objednat zboží <span class="arrow-icon white navbar-cart-checkout-btn__button-icon"></span></a></div>
+          <div class="navbar-cart__dropdown-checkout-btn navbar-cart-checkout-btn"><a class="btn btn-grey btn-ghost-grey navbar-cart-checkout-btn__button" href="#">Kontakty</a><a class="btn navbar-cart-checkout-btn__button" href="#">Akční nabídka <span class="arrow-icon white navbar-cart-checkout-btn__button-icon"></span>											</a></div>
         </div>
       </div>
-      <!-- Prázdný košík
-      .navbar-cart__dropdown
-      	.navbar-cart__dropdown-inner
-      		.navbar-cart__dropdown-empty
-      			h3.navbar-cart__dropdown-empty-title Váš košík je prázdný
-      			p.navbar-cart__dropdown-empty-text Před nákupem prosím do svého košíku vložte produkt
-      		.navbar-cart__dropdown-checkout-btn.navbar-cart-checkout-btn
-      			a.btn.btn-grey.btn-ghost-grey.navbar-cart-checkout-btn__button(href="#") Kontakty
-      			a.btn.navbar-cart-checkout-btn__button(href="#") Akční nabídka <span class="arrow-icon white navbar-cart-checkout-btn__button-icon"></span>											
-      
-      
-      -->
     </div>
   </nav><span id="dark-overlay" aria-label="Toggle navigation" data-target="#navbarNav" data-toggle="collapse"></span><span id="dark-overlay-cart"></span>
 </header>

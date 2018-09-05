@@ -106,85 +106,36 @@ header
 						a.navbar-search-responsive__single(href="#") Consectetur adipiscing elit
 						a.navbar-search-responsive__single(href="#") Do eiusmod
 
-		//
-			.navbar-user
-				.dropdown.navbar-user__dropdown
-					.dropdown-toggle.navbar-user__dropdown-toggle(id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-						span.user-icon.navbar-user__icon
-						.navbar-user__text-wrap
-							p.navbar-user__text Petroslav Novakovič
-						span.caret-icon.navbar-user__caret
-					.dropdown-menu.dropdown-menu-left.navbar-user__dropdown-menu(aria-labelledby="userDropdown")
-						a.dropdown-item.navbar-user__item(href="#") Detail účtu
-						a.dropdown-item.navbar-user__item(href="#") Historie objednávek
-						a.dropdown-item.navbar-user__item(href="#") Odhlásit
-						
 
 		.navbar-user
-			a.navbar-user__link(data-toggle="modal" data-target="#modal-login")
-				span.user-icon.white.navbar-user__icon
+			.dropdown.navbar-user__dropdown.navbar-user__link
+				.dropdown-toggle.navbar-user__dropdown-toggle(id="userDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+
+					.navbar-user__text-wrap
+						span.user-icon.white.navbar-user__icon
+					span.caret-icon.white.navbar-user__caret
+				.dropdown-menu.dropdown-menu-left.navbar-user__dropdown-menu(aria-labelledby="userDropdown")
+					a.dropdown-item.navbar-user__item(href="#") Detail účtu
+					a.dropdown-item.navbar-user__item(href="#") Historie objednávek
+					a.dropdown-item.navbar-user__item(href="#") Odhlásit
+						
+
 
 		.navbar-cart
 			span.navbar-cart__toggle
 			a.navbar-cart__link(href="#")
 				span.cart-icon-nav.navbar-cart__cart-icon
-					span.navbar-cart__icon-number 3
+					span.navbar-cart__icon-number 0
+
 
 			.navbar-cart__dropdown
 				.navbar-cart__dropdown-inner
-
-					a.navbar-cart__dropdown-item.navbar-cart-item(href="#")
-						.navbar-cart-item__img-wrap
-							img.lazy.navbar-cart-item__img(src=URLbase+"img/placeholder-60x60.png" data-src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
-						.navbar-cart-item__text-wrap
-							h5.navbar-cart-item__title #{ProductName}
-							p.navbar-cart-item__text 3 kusy
-							.navbar-cart-item__price-wrap
-								.navbar-cart-item__price-old 1099 Kč
-								.navbar-cart-item__price-main 899 Kč
-
-					a.navbar-cart__dropdown-item.navbar-cart-item(href="#")
-						.navbar-cart-item__img-wrap
-							img.lazy.navbar-cart-item__img(src=URLbase+"img/placeholder-60x60.png" data-src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
-						.navbar-cart-item__text-wrap
-							h5.navbar-cart-item__title #{ProductName}
-							p.navbar-cart-item__text 3 kusy
-							.navbar-cart-item__price-wrap
-								.navbar-cart-item__price-old 1099 Kč
-								.navbar-cart-item__price-main 899 Kč
-
-					a.navbar-cart__dropdown-item.navbar-cart-item(href="#")
-						.navbar-cart-item__img-wrap
-							img.lazy.navbar-cart-item__img(src=URLbase+"img/placeholder-60x60.png" data-src=URLbase+"img/product-thumb-small.jpg" alt="#" title="#")
-						.navbar-cart-item__text-wrap
-							h5.navbar-cart-item__title #{ProductName}
-							p.navbar-cart-item__text 3 kusy
-							.navbar-cart-item__price-wrap
-								.navbar-cart-item__price-old 1099 Kč
-								.navbar-cart-item__price-main 899 Kč
-
-					.navbar-cart__dropdown-price-summary.navbar-cart-price
-						p.navbar-cart-price__text Celková cena
-							span.navbar-cart-price__small Včetně DPH
-						h4.navbar-cart-price__title 2697 Kč
-
-					.navbar-cart__dropdown-delivery.navbar-cart-delivery 
-						.navbar-cart-delivery__text-wrap
-							p.navbar-cart-delivery__text Nakupte ještě za 303 Kč a máte Dopravu zdarma
-
+					.navbar-cart__dropdown-empty
+						h3.navbar-cart__dropdown-empty-title Váš košík je prázdný
+						p.navbar-cart__dropdown-empty-text Před nákupem prosím do svého košíku vložte produkt
 					.navbar-cart__dropdown-checkout-btn.navbar-cart-checkout-btn
-						a.btn.btn-grey.btn-ghost-grey.navbar-cart-checkout-btn__button(href="#") #[span.cross-icon.navbar-cart-checkout-btn__button-icon] Vyprázdnit
-						a.btn.navbar-cart-checkout-btn__button(href="#") Objednat zboží #[span.arrow-icon.white.navbar-cart-checkout-btn__button-icon]
-							
-			// Prázdný košík
-				.navbar-cart__dropdown
-					.navbar-cart__dropdown-inner
-						.navbar-cart__dropdown-empty
-							h3.navbar-cart__dropdown-empty-title Váš košík je prázdný
-							p.navbar-cart__dropdown-empty-text Před nákupem prosím do svého košíku vložte produkt
-						.navbar-cart__dropdown-checkout-btn.navbar-cart-checkout-btn
-							a.btn.btn-grey.btn-ghost-grey.navbar-cart-checkout-btn__button(href="#") Kontakty
-							a.btn.navbar-cart-checkout-btn__button(href="#") Akční nabídka #[span.arrow-icon.white.navbar-cart-checkout-btn__button-icon]											
+						a.btn.btn-grey.btn-ghost-grey.navbar-cart-checkout-btn__button(href="#") Kontakty
+						a.btn.navbar-cart-checkout-btn__button(href="#") Akční nabídka #[span.arrow-icon.white.navbar-cart-checkout-btn__button-icon]											
 
 
 	span(id="dark-overlay" aria-label="Toggle navigation" data-target="#navbarNav" data-toggle="collapse")
